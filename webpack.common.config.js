@@ -20,7 +20,8 @@ module.exports = {
   resolve: {
     mainFiles: ['index'],
     modules: ['node_modules'],
-    extensions: ["jsx", ".js", ".json"] 
+    // don't forget "." (comma) before extension name 
+    extensions: [".jsx", ".js", ".json"] 
   },
   module: {
     rules: [

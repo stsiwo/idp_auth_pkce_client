@@ -6,17 +6,16 @@ import { loadUser, reducer } from 'redux-oidc';
 import rootReducer from './reducers';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from "react-router-dom";
+import App from './UI/App';
 
 const store = createStore(rootReducer);
 
 //loadUser(store, userManager);
 
-const App = ( props ) => <div>hey</div>;
-
 ReactDOM.render(
   <Provider store={ store }>
     <Router>
-      <App/>
+      <App />
     </Router>
   </Provider>
   ,document.getElementById('root')
