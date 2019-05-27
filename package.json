@@ -21,6 +21,7 @@
   "homepage": "https://github.com/stsiwo/idp_auth_pkce_client#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "connected-react-router": "^6.4.0",
     "oidc-client": "^1.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About';
 import Callback from './Callback';
 import Topic from './Topic';
+import SilentRenew from './SilentRenew';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends React.Component {
         <Route path="/topic" component={ Topic } />
       {/*
         <Route path="/callback" component={ Callback } />
+        <Route path="/silent-renew" component={ SilentRenew } />
         */}
       </div>
     );
