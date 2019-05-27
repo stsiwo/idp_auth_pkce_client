@@ -1,4 +1,3 @@
-import { loadUser, reducer } from 'redux-oidc';
 import rootReducer from '../reducers';
 import { createStore } from 'redux';
 
