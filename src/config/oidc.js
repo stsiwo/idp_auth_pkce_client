@@ -7,8 +7,9 @@ const settings = {
   redirect_uri: "http://localhost:8080/callback",
   response_type: "password",
   silent_redirect_uri: "http://localhost:8080/silent-renew",
+  automaticSilentRenew: true,
   scope:"openid",
-  post_logout_redirect_uri : "http://localhost:8080/signin",
+  post_logout_redirect_uri : "http://localhost:8080",
 };
 
 const userManager = createUserManager(settings);

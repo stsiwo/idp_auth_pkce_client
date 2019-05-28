@@ -17,10 +17,8 @@ class App extends React.Component {
         <Route exact path="/" component={ Home } />
         <Route path="/about" component={ About } />
         <Route path="/topic" component={ Topic } />
-      {/*
         <Route path="/callback" component={ Callback } />
         <Route path="/silent-renew" component={ SilentRenew } />
-        */}
       </div>
     );
   }
