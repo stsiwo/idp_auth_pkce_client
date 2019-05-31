@@ -21,6 +21,11 @@ export default function configureStore( preloadedState = {} ) {
     )
   );
 
+  /**
+   * Loads potentially existing user data into the redux store, 
+   * thus eliminating a new authentication roundtrip to the authentication server 
+   * when a tab is closed or a new tab is opened.
+   **/
   loadUser(store, userManager);
 
   return store;

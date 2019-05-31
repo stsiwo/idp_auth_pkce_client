@@ -2,6 +2,7 @@ import * as React from 'react';
 import { CallbackComponent } from 'redux-oidc';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
+import userManager from '../config/oidc';
 
 /**
  * callback component to handle token response (callback) from idp
@@ -12,11 +13,13 @@ import { push } from 'connected-react-router';
 class Callback extends React.Component {
   constructor(props) {
     super(props);
+    this.successCallback = this.successCallback.bind(this);
+    this.errorCallback = this.errorCallback.bind(this);
   }
 
   successCallback(user) {
     // after user successfully log in, redirect to /home component
-    props.push('/home');
+    this.props.push('/home');
   };
 
   errorCallback(error) {
@@ -26,8 +29,9 @@ class Callback extends React.Component {
   render() {
     return (
       <CallbackComponent 
-        successCallback={ successCallback } 
-        errorCallback={ errorCallback }
+        userManager={ userManager }
+        successCallback={ this.successCallback } 
+        errorCallback={ this.errorCallback }
       >
         <p>Redirecting....Hanging there...</p>
       </CallbackComponent>
